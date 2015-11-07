@@ -1,0 +1,7 @@
+<h1>You have logged in successfully</h1>
+
+{% for message in get_flashed_messages() %}
+	{{message}}
+{% endfor %}
+
+<p>Click here to <a href="/logout" >logout</a></p>

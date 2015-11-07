@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Home</title>
+	</head>
+	<body>
+		{% block content  %} {% endblock %}
+	</body>
+
+</html>
+
+<h1>Hello Everyone</h1>
+
+{% for directory in directories %}
+	
+	<ol>
+		<li>{{directory.title}} : {{directory.url}}</li>
+	</ol>
+
+		
+{% endfor %}
+
+{% for message in get_flashed_messages() %}
+	{{message}}
+{% endfor %}
